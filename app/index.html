@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Office bug</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
+</head>
+
+<body tabindex="0">
+    <div>this is pane</div>
+    <button id="run" class="ms-Button">
+        <span>Open pop-out</span>
+    </button>
+
+    <script type="text/javascript">
+        Office.initialize = function() {
+            const button = document.getElementById('run');
+
+            button.addEventListener('click', () => {
+                    Office.context.ui.displayDialogAsync(
+                        'https://local.office:9999/popup/index.html',
+                        {
+                            width: 80,
+                            height: 80
+                        },
+                    );
+            });
+        }
+    </script>
+</body>
+
+</html>
