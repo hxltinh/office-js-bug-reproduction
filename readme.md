@@ -1,4 +1,4 @@
-# Reproduce OfficeJs Dialog bug
+# Reproduce OfficeJs Dialog bugs
 
 ### Install certificate on Windows
  1. In the certs folder just double-click the server.crt and install it to the user trusted root certificates
@@ -20,4 +20,4 @@
 3. install manifest
 4. run add-in
 5. click the `Open pop-out` button
-6. open Inspector > console for Pop-out window  (If you can not open Inspector for popup, please use [vorlonJs](http://www.vorlonjs.io/), you need to setup https for vorlonJs using files in certs folder)
+6. open Inspector > console for Pop-out window (If Mac environment then please update Mac & Office version. If you can not open Inspector for popup, please use [vorlonJs](http://www.vorlonjs.io/), you need to setup https for vorlonJs using files in certs folder)
